@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid example</title>
+</head>
+<style>
+    body{
+        display: grid;
+        align-self:center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #5F9EA0; 
+        }
+    .container    
+        {
+        display: grid;
+        margin: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        grid-template-rows:minmax(100px,auto) ;
+        position: relative;
+        grid-auto-flow: dense;
+        grid-gap: 10px;
+    }   
+    .container .box
+    {
+        background: #333333;
+        padding: 20px;
+        display: grid;
+        place-items:centre;
+        text-align: center;
+        color: #fff;
+        transition: 0.5s;
+    } 
+    .container .box:hover
+    {
+        background: #9ACD32;
+
+    }
+    .container .box img
+    {
+        position: relative;
+        max-width: 100px;
+        margin-bottom: 10px;
+    }
+    .container .box:nth-child(1)
+    {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .container .box:nth-child(4)
+    {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+    .container .box:nth-child(2)
+    {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+        
+  
+  
+</style>
+<body>
+    <div class="container">
+        <div id="a" class="box">
+            <div class="content">
+                <img src="pomegranate.jpg" height="150px" width="150px">
+                <p>Pomegranates are low in calories and fat but high in fiber, vitamins, and minerals.</p>
+            </div>
+        </div> 
+        <div id="b" class="box">
+            <div class="content">
+                <img src="straberry.jpg" height="150px" width="150px">
+                <p>Strawberries are rich in vitamin C and other antioxidants, which help reduce the risk of serious health conditions like cancer, diabetes, stroke, and heart disease.</p>
+            </div>
+        </div> 
+        <div id="c" class="box">
+            <div class="content">
+                <img src="oranges.jpg" height="150px" width="150px">
+                <p>Helps your body make collagen, a protein that heals wounds and gives you smoother skin.</p>
+            </div>
+        </div> 
+        <div id="d" class="box">
+            <div class="content">
+                <img src="grapes.jpg" height="150px" width="150px">
+                <p>Grapes contain many important vitamins and minerals, including copper and vitamins B and K.</p>
+            </div>
+        </div> 
+        <div class="box">
+            <div id="e" class="content">
+                <img src="apple.webp" height="150px" width="150px">
+                <p>An apple is a crunchy, bright-colored fruit, one of the most popular in the United States. You’ve probably heard the age-old saying, “An apple a day keeps the doctor away.” Although eating apples isn’t a cure-all, it is good for your health.</p>
+            </div>
+        </div> 
+        <div class="box">
+            <div id="f" class="content">
+                <img src="watermelon.jpg" height="150px" width="150px">
+               <p>Watermelon is a good source of antioxidants and nutrients. In addition to supporting hydration, it may also promote many aspects of health and prevent certain health conditions.</p>
+            </div> 
+        </div>
+        <div class="box">
+            <div id="f" class="content">
+                <img src="peaches-.jpg" height="150px" width="150px">
+               <p>The peach is a deciduous tree first domesticated and cultivated in Zhejiang province of Eastern China. It bears edible juicy fruits with various characteristics, most called peaches and others, nectarines.</p>
+             </div> 
+        </div>
+
+        
+
+    </div>
+</body>
+</html>
